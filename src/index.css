@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./globals.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #0A0A0A;
+  color: #FFFFFF;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #171717;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DC2626;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B91C1C;
+}
+
+/* Hide map logos */
+.maplibregl-ctrl-attrib,
+.maplibregl-ctrl-logo,
+.maplibregl-compact {
+  display: none !important;
+}
+
+/* Telegram safe bottom padding */
+.telegram-safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 24px);
+}
+
+/* Mobile safe container */
+.mobile-safe-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
